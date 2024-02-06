@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7ad693e-53ff-4a42-8f8f-b2205f34523e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/heavy_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/horrifyingcls_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/input_delay_bad.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/poorcls_index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    <list default="true" id="e7ad693e-53ff-4a42-8f8f-b2205f34523e" name="Changes" comment="chore: example with prebuild js">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/heavy_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/heavy_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +40,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.heavy_index.html.executor": "Run",
+    "JavaScript Debug.horrifyingcls_index.html.executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "Node.js.index.js.executor": "Run",
     "Node.js.main.js.executor": "Run",
@@ -74,6 +64,24 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JavaScript Debug.heavy_index.html">
+    <configuration name="heavy_index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PerfumeJS-Demo/dist/heavy_index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="horrifyingcls_index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PerfumeJS-Demo/dist/horrifyingcls_index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PerfumeJS-Demo/dist/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.heavy_index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.horrifyingcls_index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,11 +92,24 @@
       <updated>1706847836487</updated>
       <workItem from="1706847837531" duration="63000" />
       <workItem from="1706847908594" duration="12870000" />
-      <workItem from="1707180641402" duration="385000" />
+      <workItem from="1707180641402" duration="972000" />
     </task>
+    <task id="LOCAL-00001" summary="chore: example with prebuild js">
+      <option name="closed" value="true" />
+      <created>1707181084574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707181084574</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore: example with prebuild js" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: example with prebuild js" />
   </component>
 </project>
