@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Poor CLS Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .ad {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+            margin: 20px 0;
+            color: #333;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            insertRandomAds();
+        });
+
+        function insertRandomAds() {
+            const content = document.getElementById('content');
+            const paragraphs = content.getElementsByTagName('p');
+            if (paragraphs.length < 1) return;
+
+            // Specify how many ads you want to insert
+            const adCount = 10000;
+            for (let i = 0; i < adCount; i++) {
+                setTimeout(() => {
+                    const adIndex = Math.floor(Math.random() * paragraphs.length);
+                    const adElement = createAdElement(`Ad ${i + 1}`);
+                    if (paragraphs[adIndex].nextSibling) {
+                        content.insertBefore(adElement, paragraphs[adIndex].nextSibling);
+                    } else {
+                        content.appendChild(adElement);
+                    }
+                }, 100 * (i + 1));
+            }
+        }
+
+        function createAdElement(adText) {
+            const adElement = document.createElement('div');
+            adElement.className = 'ad';
+            adElement.textContent = `Placeholder for ${adText}`;
+            return adElement;
+        }
+    </script>
+</head>
+<body>
+<div id="content">
+    <!-- Large text content goes here -->
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.</p>
+
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+        its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+        packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
+        will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
+        accident, sometimes on purpose (injected humour and the like).</p>
+
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+        College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+        going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
+        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by
+        Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
+        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+    <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32
+        and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form,
+        accompanied by English versions from the 1914 translation by H. Rackham.</p>
+
+    <p>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+        some form, by injected humour, or randomised words which don't look even slightly believable. If you are going
+        to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of
+        text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this
+        the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+        of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
+        therefore always free from repetition, injected humour, or non-characteristic words etc.
+    </p>
+
+    <p>Proin rutrum magna nec volutpat tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia curae; Suspendisse mollis pulvinar tellus non tincidunt. Nunc faucibus dui vel tempor
+        ullamcorper. Donec faucibus mi non sapien tempor tempus. Nulla ultrices velit vitae eros pharetra, at feugiat
+        lectus sagittis. Suspendisse odio urna, condimentum quis congue aliquam, imperdiet vestibulum turpis. Nullam
+        risus est, sagittis eget ipsum in, tristique laoreet erat. Nunc posuere tincidunt nulla ullamcorper iaculis.
+        Donec aliquam diam et vestibulum sollicitudin. Praesent vehicula nisi sed cursus sollicitudin. Curabitur nunc
+        tellus, pellentesque et ullamcorper in, fringilla ut orci. Integer a interdum ligula. Sed in justo sed massa
+        luctus facilisis eu sed enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+    </p>
+    <p>Fusce a eros dolor. Aliquam vel dictum risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+        per inceptos himenaeos. Suspendisse potenti. Fusce at ante nisl. Pellentesque fringilla in magna id feugiat.
+        Mauris quis vestibulum eros. Integer pretium, neque vel egestas fringilla, quam lorem scelerisque lorem, at
+        blandit justo sapien ornare augue. Praesent ornare dapibus hendrerit. Vestibulum eu eleifend nisi, iaculis
+        aliquet enim. Vestibulum id tortor libero. In feugiat scelerisque diam ut placerat. Nunc auctor sapien vitae
+        consequat pellentesque. Nam tortor mauris, sodales at eleifend a, maximus quis lacus. Curabitur in lectus at
+        eros sagittis rhoncus sed non sem. Pellentesque et quam urna.
+    </p>
+    <p>Suspendisse fringilla eu elit tempus rutrum. Nulla lobortis orci ipsum, vitae fermentum augue pharetra et.
+        Curabitur eget ullamcorper arcu. Praesent iaculis nisl a nulla sagittis, ac posuere erat blandit. Nulla dapibus
+        leo magna, sed porta mi porta vel. Duis malesuada nulla ac risus euismod, vitae sollicitudin sem congue.
+        Phasellus nec sagittis tellus. Mauris luctus luctus elementum. Cras vehicula dolor urna, id pellentesque metus
+        aliquet ac. Donec et euismod nisi. Pellentesque vel turpis in ante posuere aliquet non a quam. In consequat
+        consectetur lectus, at rhoncus ante pretium vitae. Cras tristique, magna non sollicitudin congue, elit urna
+        condimentum odio, vel ultricies ligula risus sed quam.
+    </p>
+    <p>Aliquam tempus est vel imperdiet mattis. Sed auctor purus sed neque placerat tristique. Cras gravida turpis at
+        tempus semper. Maecenas sed ultricies ipsum, sit amet sagittis lacus. Phasellus vitae elit nec ipsum feugiat
+        consectetur. Suspendisse felis lorem, bibendum eget molestie quis, fringilla sed turpis. Aenean semper risus
+        eget efficitur accumsan. Morbi suscipit pharetra augue sed semper. Suspendisse potenti.</p>
+
+    <p>Proin gravida nunc eget congue iaculis. Maecenas at fermentum turpis, et gravida dolor. Quisque nec tortor
+        mollis, dignissim odio quis, volutpat neque. Donec lacinia tellus eu nibh efficitur, at ullamcorper velit
+        convallis. Nulla vel accumsan nunc, ac bibendum ipsum. Vestibulum id lobortis justo. Etiam sit amet leo ac nunc
+        eleifend tincidunt sit amet id risus. In non magna in erat sagittis dignissim sed eget eros. Mauris vel
+        tincidunt nunc, quis ornare turpis.</p>
+
+    <p>Nam iaculis faucibus neque, sed efficitur erat hendrerit sit amet. Suspendisse porta et turpis in imperdiet.
+        Curabitur vel dictum lectus, sed fringilla tortor. Suspendisse in eros vitae felis porta maximus vel sed velit.
+        Aenean ultricies feugiat urna, eget luctus dolor sollicitudin vel. Suspendisse a massa commodo, tempus eros a,
+        lacinia tellus. Aliquam facilisis ex sit amet ultricies tempor. Cras congue pulvinar urna non ullamcorper. In
+        hac habitasse platea dictumst. Morbi pellentesque leo magna, vel consectetur sem sodales eu. Quisque a sem
+        placerat, cursus nisl id, maximus nibh. Praesent tempor nisl nec mauris convallis tempor. Fusce urna mauris,
+        imperdiet eget lectus ut, consequat laoreet augue. Morbi sed odio mattis, mollis mi sed, fermentum tortor.</p>
+
+    <p>Donec tincidunt tortor leo, id ornare metus ultrices et. Cras sit amet venenatis sem, eu consectetur risus.
+        Maecenas tellus eros, auctor sit amet tempus vel, dictum eu mauris. Maecenas in luctus arcu, in bibendum sapien.
+        Aenean eget augue ut erat lacinia porttitor vel id elit. Vestibulum justo orci, placerat vitae mollis a,
+        interdum ac dui. Aenean vitae tellus magna. Donec sit amet dui eu libero dapibus blandit. Mauris rutrum turpis
+        sit amet augue ultricies, sed feugiat eros pellentesque. Vivamus venenatis aliquet vehicula.</p>
+
+    <!-- Add more paragraphs to simulate a lot of text -->
+</div>
+<script src="main.js"></script>
+</body>
+</html>
